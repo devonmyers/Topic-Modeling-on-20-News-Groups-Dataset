@@ -1,1 +1,9 @@
 # Topic-Modeling-on-20-News-Groups-Dataset
+
+In the Science News Group Topic Modeling.ipynp notebook, an introductory exploration of topic modeling is performed using four different methods: Latent Semantic Analysis, Latent Dirichlet Allocation, Hierarchical Dirichlet Process, and Nonnegative Matrix Factorization.  Topic modeling seeks to uncover the latent ideas (topics) in a corpus. The four science-related news groups from the 20 news groups dataset (sci.med, sci.crypt, sci.electronics, and sci.space) are used as the corpus for topic modeling.
+
+After installing and importing all of the relevant libraries, stop words are collected.  Stop words are words that are commonly used in a language, and will be removed from the corpus as they add little to no information to the relevant topic. Using the sklearn fetch_20newsgroups function, we are able to easily load the relevant science news group data into a pandas dataframe.  Since the entries in the 20 news groups consists of textual data, one preprocessing step is to normalize whitespace in the data by replacing any special characters (punctuation, apostrophes, semicolons, newline or tab characters, etc.) with a blank space.  
+
+Note that elements in the dataset are labeled with an integer value from 0 to 3, depending on which of the four news groups they come from.  
+
+Relevant libraries from sklearn were imported to perfrom each of the four topic modeling methods.  For each method, the major topics from the corpus were returned and checked manually for similarity in topics, and coherence scores were also computed.  Coherence is the pairwise similarity of words from a topic, so topic words that all relate to medical information would have high coherence, but topic words from cyptography and space information would have lower coherence.  In addition to coherence, word clouds were also created from topics each topic modeling method returned.  
